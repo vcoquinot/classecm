@@ -1,6 +1,6 @@
 
 // colors
-// $darkBeige: #f7c354;
+ $white: #fff;
 // $beige : #fcd782;
 // $lightBeige: #f4c669;
 
@@ -15,6 +15,10 @@
 // .list-group-item:nth-child(3n) {
 //     background-color:$lightBeige;
 // }
+
+h2 .play{
+    color: $white;
+}
 
 h1 {
     margin-bottom : 25px;
