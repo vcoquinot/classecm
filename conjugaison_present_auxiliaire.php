@@ -19,7 +19,7 @@
     </header>
 
     <main>
-      <section class="text-center mb-4 pt-2 pb-2 bg-info">
+      <section class="quizz text-center mb-4 pt-2 pb-2 bg-info">
         <h2 class="play text-light">À TOI DE JOUER</h2>
         <p class="subheading font-weight-light mb-2 text-light">Conjugue les auxiliaires au présent</p>
         <!-- Image -->
