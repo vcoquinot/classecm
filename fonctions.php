@@ -10,7 +10,7 @@ function scoreDisplay($numberOfQuestions){
   <?php
 }
 
-function resetScoreAndQuestionNumbers(){
+function resetScoreAndQuestionNumber(){
     $_SESSION['score'] = 0; 
     $_SESSION['numeroQuestion'] = 1;
     }
