@@ -23,7 +23,7 @@
             <h2 class="play text-light">À TOI DE JOUER</h2>
             <p class="subheading font-weight-light mb-2 text-light">Conjugue les auxiliaires au présent</p>
             <!-- Image -->
-            <img class="mb-4" src="img/avatar1.svg" alt="">     
+            <img src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortCurly&accessoriesType=Blank&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=Gray02&eyeType=Default&eyebrowType=Default&mouthType=Smile&skinColor=Brown' alt="">     
     
             <?php
             //BDD random question

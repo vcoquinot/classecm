@@ -24,7 +24,7 @@
             <h2 class="play text-light">À TOI DE JOUER</h2>
             <p class="subheading font-weight-light mb-2 text-light">Conjugue au présent</p>
             <!-- Image -->
-            <img class="mb-4" src="img/avatar2.svg" alt="">
+            <img src='https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight2&accessoriesType=Blank&hairColor=Blonde&facialHairType=Blank&clotheType=CollarSweater&clotheColor=Black&eyeType=Default&eyebrowType=Default&mouthType=Smile&skinColor=Light'alt="">
                 
             <?php
             //BDD random question
