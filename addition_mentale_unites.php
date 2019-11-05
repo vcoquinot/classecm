@@ -25,7 +25,7 @@ include ("fonctions_maths.php"); ?>
             <h2 class="play text-light">C'EST PARTI</h2>
             <p class="subheading font-weight-light mb-2 text-light">Essaie sans t'aider de tes doigts !</p>
             <!-- Image -->
-            <img src='https://avataaars.io/?avatarStyle=Circle&topType=LongHairNotTooLong&accessoriesType=Blank&hairColor=Brown&facialHairType=Blank&clotheType=Hoodie&clotheColor=Pink&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Smile&skinColor=Light' alt=""/>
+            <img src='https://avataaars.io/?avatarStyle=Circle&topType=LongHairBigHair&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=ShirtCrewNeck&clotheColor=PastelGreen&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Smile&skinColor=Pale' alt=""/>
         </header>
     <!-- operation form-->
         <main>
