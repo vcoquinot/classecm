@@ -27,10 +27,10 @@
                         aria-controls="collapse"><i class="fas fa-plus fa-9x"></i></a>
                         <div class="collapse" id="collapse_add">
                             <div class="card-body justify-content-between align-items-center">
-                            <button class="list-group-item btn btn-primary mb-2" href="addition_mentale_unites.php">Unités</button>
-                            <button class="list-group-item btn btn-primary mb-2" href="addition_mentale_10.php">+10</button>
-                            <button class="list-group-item btn btn-primary mb-2" href="addition_mentale_100.php" >+100</button>
-                            <button class="list-group-item btn btn-primary mb-2" href="addition_mentale_1000.php">+1000</button>
+                                <button type="button" class="list-group-item btn btn-primary mb-2"><a href="addition_mentale_unites.php">Unités</a></button>
+                                <button type="button" class="list-group-item btn btn-primary mb-2" a href="addition_mentale_10.php">+10</a></button>
+                                <button type="button" class="list-group-item btn btn-primary mb-2" a href="addition_mentale_100.php">+100</a></button>
+                                <button type="button" class="list-group-item btn btn-primary mb-2" a href="addition_mentale_1000.php">+1000</a></button>
                             </div>
                         </div>
                     </div>
