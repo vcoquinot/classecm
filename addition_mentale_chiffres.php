@@ -10,17 +10,13 @@ include ("fonctions_maths.php"); ?>
     <meta name="description" content="Site de révisions pour les élèves de CM"> 
     <script src="https://kit.fontawesome.com/94ce8cff49.js" crossorigin="anonymous"></script>     
     <link rel="stylesheet" href="css/classecm.css">
-    <title>Additions d'unités</title>
+    <title>Addition de chiffres entre 1 et 9</title>
 </head>
 
 <body>
     <?php $number=0; ?>
     <div class="container">
-        <!-- TO DO : CHECK TAG !!!-->
-            <header class="d-flex align-items-center flex-column">
-                <h1>Calcul mental d'unités</h1>
-            </header>
-
+            <h1 class="text-center">Addition de chiffres entre 1 et 9</h1>
             <header class="quizz text-center mb-4 pt-2 pb-2 bg-info">
                 <h2 class="play text-light">C'EST PARTI</h2>
                 <p class="subheading font-weight-light mb-2 text-light">Essaie sans t'aider de tes doigts !</p>
