@@ -75,7 +75,6 @@
             ?>
         </main>
         <section class="row justify-content-center">
-            <a href="addition_mentale_unites.php"><button type="button" class="btn btn-outline-info rounded font-weight-bold mr-2">Rejouer</button></a>
             <a href="calcul_mental.php"><button type="button" class="btn btn-outline-info rounded font-weight-bold mr-2">Calcul mental</button></a>
             <a href="accueil.php"><button type="button" class="btn btn-outline-info rounded font-weight-bold">Accueil</button></a>
         </section>
