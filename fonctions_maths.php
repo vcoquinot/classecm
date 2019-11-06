@@ -22,7 +22,14 @@
         $randNumber=substr($randNumberOneFigure,1);
         echo $randNumber;
         return $randNumber;
-      }
+    }
+
+    function randCountNumberWithSeveralFigures($number){
+      $randNumberOneFigure = $number.mt_rand(10,999);
+      $randNumber=substr($randNumberOneFigure,1);
+      echo $randNumber;
+      return $randNumber;
+  }
    
 
 
