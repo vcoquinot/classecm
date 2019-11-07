@@ -4,17 +4,18 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-$primary: #65c9ff;
+$primary: #4fc8c2;
 $secondary: #FF502F;
 $info: #01333c;
 $light: #fff;
 $warning: #e96d6d;
 
+
 //$link-color:$info;
 //$card-bg: #01333c;
-.card {
+/*.card {
   background-color: $card-bg !important;
-}
+}*/
 
  @import "bootstrap/functions";
  @import "bootstrap/variables";
