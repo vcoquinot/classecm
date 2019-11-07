@@ -14,6 +14,8 @@
 
 <body>
     <?php
+
+    if(isset($_GET["reponse"] AND $_SESSION['id_question'] AND $_SESSION['intitule_question']) AND $_SESSION['numeroQuestion']){
     //Recovery of data session
     $userAnswer = $_GET["reponse"];
     $idQuestion = $_SESSION['id_question'];
@@ -22,7 +24,8 @@
     $url = $_GET["url"];
     //Number of questions limitation
     $totalNumberOfQuestions = 6;
-
+    }else{echo "error";}
+    
     //User answer check
     if ($questionNumber <= $totalNumberOfQuestions) {
         //search of the associated answer to the question in BDD
@@ -40,20 +43,17 @@
             $_SESSION['score']++;
             $successComment = $bdd->query("SELECT commentaire_reussite FROM reussite ORDER BY RAND() LIMIT 1");
             //Random success comment
-            $donneesReussite = $successComment->fetch();
-            $felicitation = $donneesReussite['commentaire_reussite'];
+            $successData = $successComment->fetch();
+            $congrats = $successData['commentaire_reussite'];
             ?>
             <!--Success comment display-->
             <div class="container">
-            <div class="row alert alert-success font-weight-bold lead justify-content-center" role=" success alert">
-                <h2 class="alert-heading"><?php echo $felicitation; ?></h2>
-            </div>
-        </div>
-            <?php
-            //next question
-            header("refresh:2;url='$url'");
-                
-         } else {
+                <div class="row alert alert-success font-weight-bold lead justify-content-center" role=" success alert">
+                    <h2 class="alert-heading"><?php echo $congrats; ?></h2>
+                </div>
+            </div> 
+            <?php       
+        } else {
             //CASE 2 : user answer is not correct
             ?>
             <div class="container">
@@ -64,40 +64,61 @@
                     <img class="justify-content-center mb-4" src="img/avatar3.svg" alt="">
                     <div class="font-weight-bold m-4" role="alert">
                         <p class="row justify-content-center m-4"><?php echo $question ?></p>
-                        <?php echo  $correctAnswer ?>    
+                        <?php echo $correctAnswer ?>    
                     </div>
                 </section>
-
-                <div class="row justify-content-center">
-                    <a href="<?php echo $url ?>"><button type="button" class="btn btn-outline-info rounded font-weight-bold">Question suivante</button></a>
-                </div>
             </div>
         <?php
         }
-        $_SESSION['numeroQuestion']++;
-        echo "n° question : " . $_SESSION['numeroQuestion']++;
-     
-        //when number of questions is reached
-        } else {
-        scoreDisplay($totalNumberOfQuestions);
-            if ($_SESSION['score'] = ($totalNumberOfQuestions)) {
-                ?>
-                <div class="container">
-                    <div class="row justify-content-center ">
-                        <h2 class="commentaire"><?php echo "Entraîne-toi encore un peu pour obtenir un max de points !"; ?></h2>
-                    </div>
-                </div>
-                <?php resetScoreAndQuestionNumber();
-        }
+    }
+    
+    //as long as total number of questions is not reached, next question button
+    if ($questionNumber < $totalNumberOfQuestions) {
         ?>
+        <div class="row justify-content-center">
+            <a href="<?php echo $url ?>"><button type="button" class="btn btn-outline-info rounded font-weight-bold">Question suivante</button></a>
+        </div>
+    <?php
+    }
+    //Score display
+    if ($questionNumber == $totalNumberOfQuestions) {
+        ?>
+        <section class="container mt-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-2 mt-4">
+                    <img class="img-fluid" src="img/target.png" alt ="cible">                    
+                </div>
+            </div>
+            <div class="row justify-content-center mt-4">
+                <h2 class="row text-center">SCORE FINAL </h2>
+                <?php
+                //when number of questions is reached
+                scoreDisplay($totalNumberOfQuestions);
+                ?>
+            </div>
+            <?php 
+            //Comment if maximum score is not reached      
+            if(($_SESSION['score']) < $totalNumberOfQuestions){
+            ?>
+                <div class="row justify-content-center ">
+                    <h2 class="commentaire"><?php echo "Entraîne-toi encore un peu pour obtenir un max de points !"; ?></h2>
+                </div>
+            <?php
+            }
+            //counters reset + redirection buttons
+            resetScoreAndQuestionNumber(); 
+            ?>                
+        </section>
+  
         <section class="container">
             <div class="row justify-content-center">
-                <a href="<?php echo $url ?>"><button type="button" class="btn">Rejouer</button></a>
-                <a href="accueil.php"><button type="button" class="btn">Accueil</button></a>
+                <a href="<?php echo $url ?>"><button type="button" class="btn btn-outline-info rounded font-weight-bold mr-2">Rejouer</button></a>
+                <a href="accueil.php"><button type="button" class="btn btn-outline-info rounded font-weight-bold mr-2">Accueil</button></a>
             </div>
-        </section>
+        </section> 
         <?php
     }
-    ?>      
+    ?>
+    
 </body>
 </html>
