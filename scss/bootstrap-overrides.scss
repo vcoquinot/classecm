@@ -9,25 +9,12 @@ $secondary: #FF502F;
 $info: #01333c;
 $light: #fff;
 $warning: #e96d6d;
-/*$enable-gradients: true;
-$colors: (
-  "blue": $blue,
-  "indigo": $indigo,
-  "purple": $purple,
-  "pink": $pink,
-  "red": $red,
-  "orange": $orange,
-  "yellow": $yellow,
-  "green": $green,
-  "teal": $teal,
-  "cyan": $cyan,
-  "white": $white,
-  "gray": $gray-600,
-  "gray-dark": $gray-800
-) !default;
-#FF8080;
-#569ef6;*/
 
+//$link-color:$info;
+//$card-bg: #01333c;
+.card {
+  background-color: $card-bg !important;
+}
 
  @import "bootstrap/functions";
  @import "bootstrap/variables";
