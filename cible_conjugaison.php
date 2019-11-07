@@ -14,8 +14,6 @@
 
 <body>
     <?php
-
-    if(isset($_GET["reponse"] AND $_SESSION['id_question'] AND $_SESSION['intitule_question']) AND $_SESSION['numeroQuestion']){
     //Recovery of data session
     $userAnswer = $_GET["reponse"];
     $idQuestion = $_SESSION['id_question'];
@@ -24,7 +22,6 @@
     $url = $_GET["url"];
     //Number of questions limitation
     $totalNumberOfQuestions = 6;
-    }else{echo "error";}
     
     //User answer check
     if ($questionNumber <= $totalNumberOfQuestions) {
