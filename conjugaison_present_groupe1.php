@@ -14,8 +14,6 @@
   </head>
 
   <body>
-      <?php resetScoreAndQuestionNumber(); ?>
-
       <div class="container">
         <header class="d-flex align-items-center flex-column">
             <h1>Le présent du 1er groupe</h1>
