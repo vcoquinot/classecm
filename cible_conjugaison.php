@@ -23,6 +23,7 @@
     //Number of questions limitation
     $totalNumberOfQuestions = 6;
     
+    //echo $_SESSION['numeroQuestion'];
     //User answer check
     if ($questionNumber <= $totalNumberOfQuestions) {
         //search of the associated answer to the question in BDD
@@ -68,6 +69,8 @@
         <?php
         }
     }
+    $_SESSION['numeroQuestion']++;
+    //echo $_SESSION['numeroQuestion'];
     
     //as long as total number of questions is not reached, next question button
     if ($questionNumber < $totalNumberOfQuestions) {

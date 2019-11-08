@@ -43,7 +43,7 @@
                     $question->closeCursor();?>
                     <!--Form answer-->
                     <?php conjugationForm();?>
-                    <input class="input border border-primary" type="hidden" name="url" value="conjugaison_futur_re.php">
+                    <input class="input border border-primary" type="hidden" name="url" value="conjugaison_futur_verbe_re.php">
                 </form>
             </div>
         </main>
