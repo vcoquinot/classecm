@@ -18,12 +18,12 @@
     $userAnswer = $_GET["reponse"];
     $idQuestion = $_SESSION['id_question'];
     $question = $_SESSION['intitule_question'];
-    $questionNumber = $_SESSION['numeroQuestion'];
+    $questionNumber = $_SESSION['questionNumber'];
     $url = $_GET["url"];
     //Number of questions limitation
     $totalNumberOfQuestions = 6;
-    
-    //echo $_SESSION['numeroQuestion'];
+
+    //echo $_SESSION['questionNumber'];
     //User answer check
     if ($questionNumber <= $totalNumberOfQuestions) {
         //search of the associated answer to the question in BDD
@@ -69,8 +69,8 @@
         <?php
         }
     }
-    $_SESSION['numeroQuestion']++;
-    //echo $_SESSION['numeroQuestion'];
+    $_SESSION['questionNumber']++;
+    //echo $_SESSION['questionNumber'];
     
     //as long as total number of questions is not reached, next question button
     if ($questionNumber < $totalNumberOfQuestions) {
@@ -105,11 +105,14 @@
                 </div>
             <?php
             }
-            //counters reset + redirection buttons
-            resetScoreAndQuestionNumber(); 
+        
+
             ?>                
         </section>
-  
+        <?php
+        //counters reset + redirection buttons
+        resetScoreAndQuestionNumber();
+        ?>
         <section class="container">
             <div class="row justify-content-center">
                 <a href="<?php echo $url ?>"><button type="button" class="btn btn-outline-info rounded font-weight-bold mr-2">Rejouer</button></a>
