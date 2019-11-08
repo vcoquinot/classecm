@@ -5,16 +5,16 @@
       return $additionResult;
     }
     function substract($a,$b){
-      $additionResult = $a - $b;
-      return $additionResult;
+      $substractResult = $a - $b;
+      return $substractResult;
     }
-    function multiplyn($a,$b){
-      $additionResult = $a * $b;
-      return $additionResult;
+    function multiply($a,$b){
+      $multiplyResult = $a * $b;
+      return $multiplyResult;
     }
     function divide($a,$b){
-      $additionResult = $a / $b;
-      return $additionResult;
+      $divideResult = $a / $b;
+      return $divideResult;
     }
 
     function randCountNumberWithOneFigure($number){
@@ -30,6 +30,13 @@
       echo $randNumber;
       return $randNumber;
   }
+
+  /*function searchRandNumnber($number, $from, $upTo){
+    $randNumber=$number.mt_rand($from,$upTo);
+    $randNumber=substr($randNumber,1);
+    echo $randNumber;
+  }
+  */
    
 
 
