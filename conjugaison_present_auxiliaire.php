@@ -29,16 +29,16 @@
             //BDD random question
             $question = $bdd->query("SELECT intitule_question, id_question FROM question WHERE id_matiere = 2 && id_theme = 25 ORDER BY RAND() LIMIT 1");
             $questionData = $question->fetch();
+
+            $_SESSION['id_question'] = $questionData['id_question'];
+            $_SESSION['intitule_question'] = $questionData['intitule_question'];
+            $question->closeCursor();
             ?>
 
             <div class="form-group">
                 <form action="cible_conjugaison.php" method="get">        
                     <!--question display -->
-                    <p class="font-weight-bold text-light"><?php echo $questionData['intitule_question']; ?></p>
-                    <?php
-                    $_SESSION['id_question'] = $questionData['id_question'];
-                    $_SESSION['intitule_question'] = $questionData['intitule_question'];
-                    $question->closeCursor();?>
+                    <p class="font-weight-bold text-light"><?php echo $_SESSION['intitule_question']; ?></p>
                     
                     <!--Form answer-->
                     <?php conjugationForm();?>
