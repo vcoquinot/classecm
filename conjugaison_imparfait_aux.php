@@ -23,7 +23,7 @@
 
             <main class="quizz text-center mb-4 pt-2 pb-2 bg-info">
             <h2 class="play text-light">À TOI DE JOUER !</h2>
-            <p class="subheading font-weight-light mb-2 text-light">Conjugue les verbes à l'imparfait</p>
+            <p class="subheading font-weight-light mb-2 text-light">Conjugue les auxiliares à l'imparfait</p>
             <!-- Image -->
             <img src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairDreads02&accessoriesType=Blank&hairColor=Brown&facialHairType=Blank&clotheType=Hoodie&clotheColor=Black&eyeType=Wink&eyebrowType=DefaultNatural&mouthType=Smile&skinColor=Brown' alt="">
 
@@ -31,16 +31,16 @@
             //BDD random question
             $question = $bdd->query("SELECT intitule_question, id_question FROM question WHERE id_matiere = 2 && id_theme = 17 ORDER BY RAND() LIMIT 1");
             $questionData = $question->fetch();
+
+            $_SESSION['id_question'] = $questionData['id_question'];
+            $_SESSION['intitule_question'] = $questionData['intitule_question'];
             ?>
 
             <div class="form-group">
                 <form action="cible_conjugaison.php" method="get">        
                     <!--question display -->
-                    <p class="font-weight-bold text-light"><?php echo $questionData['intitule_question']; ?></p>
-                    <?php
-                    $_SESSION['id_question'] = $questionData['id_question'];
-                    $_SESSION['intitule_question'] = $questionData['intitule_question'];
-                    $question->closeCursor();?>
+                    <p class="font-weight-bold text-light"><?php echo $_SESSION['intitule_question']; ?></p>
+                    
                     <!--Form answer-->
                     <?php conjugationForm();?>
                     <input class="input border border-primary" type="hidden" name="url" value="conjugaison_imparfait_aux.php">
