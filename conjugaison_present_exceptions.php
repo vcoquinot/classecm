@@ -22,7 +22,7 @@ require_once "connexion_bdd.php";?>
 
         <main class="quizz text-center mb-4 pt-2 pb-2 bg-info">
             <h2 class="play text-light">À TOI DE JOUER</h2>
-            <p class="subheading font-weight-light mb-2 text-light">Conjugue au présent mais fais ttention aux pièges !</p>
+            <p class="subheading font-weight-light mb-2 text-light">Conjugue au présent mais fais attention aux pièges !</p>
             <!-- Image -->
             <img src='https://avataaars.io/?avatarStyle=Circle&topType=LongHairNotTooLong&accessoriesType=Blank&hairColor=Brown&facialHairType=Blank&clotheType=Hoodie&clotheColor=Pink&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Smile&skinColor=Light' alt=""/>
                 
@@ -37,12 +37,12 @@ require_once "connexion_bdd.php";?>
 
             <div class="form-group">
                 <form action="cible_conjugaison.php" method="get">        
-                <!--question display -->
-                <p class="font-weight-bold text-light"><?php echo $_SESSION['intitule_question']; ?></p>
-                                   
-                <!--Form answer-->
-                <?php conjugationForm();?>
-                <input class="input border border-primary" type="hidden" name="url" value="conjugaison_present_exceptions.php">
+                    <!--question display -->
+                    <p class="font-weight-bold text-light"><?php echo $_SESSION['intitule_question']; ?></p>
+                                    
+                    <!--Form answer-->
+                    <?php conjugationForm();?>
+                    <input class="input border border-primary" type="hidden" name="url" value="conjugaison_present_exceptions.php">
                 </form>
             </div>       
         </main>
