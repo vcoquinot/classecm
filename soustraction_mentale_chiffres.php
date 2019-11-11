@@ -14,7 +14,13 @@ include ("fonctions_maths.php"); ?>
 </head>
 
 <body>
-    <?php $number=0; ?>
+    <?php 
+    $number=0;
+    $from= 1;
+    $upTo= 10;
+    // TO DO : FIRST NUMBER MUST BE SUPERIOR TO SECOND NUMBER*/
+    ?>
+    
     <div class="container">
             <h1 class="text-center">Soustractions de chiffres entre 1 et 9</h1>
             <header class="quizz text-center mb-4 pt-2 pb-2 bg-info">
@@ -31,10 +37,10 @@ include ("fonctions_maths.php"); ?>
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
                                 <!-- first random number-->
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
-                                <b><?php $randFirstNumber = randCountNumberWithOneFigure($number);?></b></span>
+                                <b><?php $randFirstNumber = searchRandNumber($number,$from, $upTo); ?></b></span>
                                 <i class="fa fa-minus-circle" style="color:#FF502F"></i> 
                                 <!-- second random number-->
-                                <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b><?php $randSecondNumber = randCountNumberWithOneFigure($number);?></b></span>
+                                <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b><?php $randSecondNumber = searchRandNumber($number,$from, $upTo); ?></b></span>
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b>=</b></span>
                                 <!-- transmission des données-->
                                 <input class="col-lg-3 col-md-3 col-sm-3 col-xs-3" name="firstResult" type="text" placeholder="total">
@@ -45,10 +51,10 @@ include ("fonctions_maths.php"); ?>
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
                                 <!-- first random number-->
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
-                                <b><?php $randFirstNumber = randCountNumberWithOneFigure($number);?></b></span>
+                                <b><?php $randFirstNumber = searchRandNumber($number,$from, $upTo); ?></b></span>
                                 <i class="fa fa-minus-circle" style="color:#FF502F"></i> 
                                 <!-- second random number-->
-                                <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b><?php $randSecondNumber = randCountNumberWithOneFigure($number);?></b></span>
+                                <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b><?php $randSecondNumber = searchRandNumber($number,$from, $upTo); ?></b></span>
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b>=</b></span>
                                 <!-- transmission des données-->
                                 <input class="col-lg-3 col-md-3 col-sm-3 col-xs-3" name="secondResult" type="text" placeholder="total">
@@ -63,10 +69,10 @@ include ("fonctions_maths.php"); ?>
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
                                 <!-- first random number-->
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
-                                <b><?php $randFirstNumber = randCountNumberWithOneFigure($number);?></b></span>
+                                <b><?php $randFirstNumber = searchRandNumber($number,$from, $upTo); ?></b></span>
                                 <i class="fa fa-minus-circle" style="color:#FF502F"></i> 
                                 <!-- second random number-->
-                                <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b><?php $randSecondNumber = randCountNumberWithOneFigure($number);?></b></span>
+                                <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b><?php $randSecondNumber = searchRandNumber($number,$from, $upTo); ?></b></span>
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b>=</b></span>
                                 <!-- transmission des données-->
                                 <input class="col-lg-3 col-md-3 col-sm-3 col-xs-3" name="thirdResult" type="text" placeholder="total">
@@ -78,10 +84,10 @@ include ("fonctions_maths.php"); ?>
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
                                 <!-- first random number-->
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
-                                <b><?php $randFirstNumber = randCountNumberWithOneFigure($number);?></b></span>
+                                <b><?php $randFirstNumber = searchRandNumber($number,$from, $upTo); ?></b></span>
                                 <i class="fa fa-minus-circle" style="color:#FF502F"></i> 
                                 <!-- second random number-->
-                                <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b><?php $randSecondNumber = randCountNumberWithOneFigure($number);?></b></span>
+                                <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b><?php $randSecondNumber = searchRandNumber($number,$from, $upTo); ?></b></span>
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b>=</b></span>
                                 <!-- transmission des données-->
                                 <input class="col-lg-3 col-md-3 col-sm-3 col-xs-3" name="fourthResult" type="text" placeholder="total">

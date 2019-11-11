@@ -14,8 +14,12 @@ include ("fonctions_maths.php"); ?>
 </head>
 
 <body>
-    <?php $number= 0; 
-    $numberHundred = 100;?>
+    <?php 
+    $number= 0; 
+    $from=100;
+    $upTo= 1000;
+    $numberHundred = 100;
+    ?>
     <div class="container">
             <h1 class="text-center">Addition par 100</h1>
             <header class="quizz text-center mb-4 pt-2 pb-2 bg-info">
@@ -32,7 +36,7 @@ include ("fonctions_maths.php"); ?>
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
                                 <!-- first random number-->
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
-                                <b><?php $randFirstNumber = randCountNumberWithSeveralFigures($number);?></b></span>
+                                <b><?php $randFirstNumber = searchRandNumber($number,$from, $upTo);?></b></span>
                                 <i class="fa fa-plus-circle text-secondary"></i> 
                                 <!-- add 100-->
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b><?php echo $numberHundred;?></b></span>
@@ -46,7 +50,7 @@ include ("fonctions_maths.php"); ?>
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
                                 <!-- first random number-->
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
-                                <b><?php $randFirstNumber = randCountNumberWithSeveralFigures($number);?></b></span>
+                                <b><?php $randFirstNumber = searchRandNumber($number,$from, $upTo);?></b></span>
                                 <i class="fa fa-plus-circle text-secondary"></i> 
                                 <!-- add 10-->
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b><?php echo $numberHundred;?></b></span>
@@ -64,7 +68,7 @@ include ("fonctions_maths.php"); ?>
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
                                 <!-- first random number-->
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
-                                <b><?php $randFirstNumber = randCountNumberWithSeveralFigures($number);?></b></span>
+                                <b><?php $randFirstNumber = searchRandNumber($number,$from, $upTo);?></b></span>
                                 <i class="fa fa-plus-circle  text-secondary"></i> 
                                 <!-- add 10-->
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b><?php echo $numberHundred;?></b></span>
@@ -79,7 +83,7 @@ include ("fonctions_maths.php"); ?>
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
                                 <!-- first random number-->
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
-                                <b><?php $randFirstNumber = randCountNumberWithSeveralFigures($number);?></b></span>
+                                <b><?php $randFirstNumber = searchRandNumber($number,$from, $upTo);?></b></span>
                                 <i class="fa fa-plus-circle text-secondary"></i> 
                                 <!-- add 10-->
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b><?php echo $numberHundred;?></b></span>
