@@ -23,14 +23,15 @@
                 <article class="col-lg-6">
                     <div class="card lg-4 align-items-center">
                     <h2 class="card-header-title row text-center">Additions</h2>
-                    <a data-toggle="collapse" href="#collapse_add" role="button" aria-expanded="false"
+                    <!-- *****TO DO***** FA COLOR-->
+                    <a data-toggle="collapse" href="#collapse_add" role="button" aria-expanded="false"                   
                         aria-controls="collapse"><i class="fas fa-plus fa-9x"></i></a>
                         <div class="collapse" id="collapse_add">
                             <div class="card-body justify-content-between align-items-center">
-                                <button type="button" class="list-group-item btn btn-primary mb-2"><a href="addition_mentale_chiffres.php">Unités</a></button>
-                                <button type="button" class="list-group-item btn btn-primary mb-2"><a href="addition_mentale_10.php">+10</a></button>
-                                <button type="button" class="list-group-item btn btn-primary mb-2"><a href="addition_mentale_100.php">+100</a></button>
-                                <button type="button" class="list-group-item btn btn-primary mb-2"><a href="addition_mentale_1000.php">+1000</a></button>
+                                <a class="btn btn-primary mb-2" href="addition_mentale_chiffres.php">Unités</a>
+                                <a class="btn btn-primary mb-2" href="addition_mentale_10.php">+10</a>
+                                <a class="btn btn-primary mb-2" href="addition_mentale_100.php">+100</a>
+                                <a class="btn btn-primary mb-2" href="addition_mentale_1000.php">+1000</a>
                             </div>
                         </div>
                     </div>
@@ -43,7 +44,7 @@
                         <div class="collapse" id="collapse_substract">
                             <div class="card-body justify-content-between align-items-center">
                                 <a class="btn btn-primary mb-2" href="soustraction_mentale_unites.php">Unités</a>
-                                <a class="btn btn-primary mb-2" href="soustraction_mentale_10.php">-10</a></button>
+                                <a class="btn btn-primary mb-2" href="soustraction_mentale_10.php">-10</a>
                                 <a class="btn btn-primary mb-2" href="soustraction_mentale_100.php">-100</a>
                                 <a class="btn btn-primary mb-2" href="soustraction_mentale_1000.php">-1000</a>
                             </div>  
