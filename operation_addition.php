@@ -71,7 +71,8 @@ include ("fonctions_maths.php"); ?>
               <!-- hidden input to send user answer data-->
                 <input type="hidden" name="correctTotal" value="<?php $correctTotal= add($randFirstNumber, $randSecondNumber); 
                 echo $correctTotal; ?>">
-                <input type="hidden" name="questionNumber">
+                <input type="hidden" name="questionNumber" >
+                <input class="input border border-primary" type="hidden" name="url" value="operation_addition.php">
             </div>
             <!-- validation button-->
             <div class="row justify-content-center">
