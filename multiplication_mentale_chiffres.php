@@ -14,19 +14,22 @@ include ("fonctions_maths.php"); ?>
 </head>
 
 <body>
+    <!-- Instantiation-->
     <?php 
     $number=0; 
     $from=1;
-    $upTo=9; ?>
+    $upTo=9; 
+    ?>
+
     <div class="container">
             <h1 class="text-center">Multiplication de chiffres entre 1 et 9</h1>
             <header class="quizz text-center mb-4 pt-2 pb-2 bg-info">
                 <h2 class="play text-light">C'EST PARTI</h2>
                 <p class="subheading font-weight-light mb-2 text-light">Pas de secret, les tables de multiplication s'apprennent par coeur !</p>
-                <!-- Image -->
+                <!-- Avatar -->
                 <img src='https://avataaars.io/?avatarStyle=Circle&topType=LongHairBigHair&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=ShirtVNeck&clotheColor=Black&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Smile&skinColor=Pale' alt=""/>
             </header>
-        <!-- operation form-->
+            <!-- operation form-->
             <main>
                 <form action="cible_calcul_mental.php" method="get">
                     <div class="col-12">
@@ -39,7 +42,7 @@ include ("fonctions_maths.php"); ?>
                                 <!-- second random number-->
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b><?php $randSecondNumber = searchRandNumber($number,$from, $upTo); ?></b></span>
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b>=</b></span>
-                                <!-- transmission des données-->
+                                <!-- transmission of data-->
                                 <input class="col-lg-3 col-md-3 col-sm-3 col-xs-3" name="firstResult" type="text" placeholder="total">
                                 <input name="firstCorrectResult" type="hidden"
                                 value="<?php echo $firstCorrectResult= multiply($randFirstNumber, $randSecondNumber); 
@@ -53,7 +56,7 @@ include ("fonctions_maths.php"); ?>
                                 <!-- second random number-->
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b><?php $randSecondNumber = searchRandNumber($number,$from, $upTo); ?></b></span>
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b>=</b></span>
-                                <!-- transmission des données-->
+                                <!-- transmission of data-->
                                 <input class="col-lg-3 col-md-3 col-sm-3 col-xs-3" name="secondResult" type="text" placeholder="total">
                                 <input name="secondCorrectResult" type="hidden"
                                 value="<?php echo $secondCorrectResult= multiply($randFirstNumber, $randSecondNumber); 
@@ -71,7 +74,7 @@ include ("fonctions_maths.php"); ?>
                                 <!-- second random number-->
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b><?php $randSecondNumber = searchRandNumber($number,$from, $upTo); ?></b></span>
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b>=</b></span>
-                                <!-- transmission des données-->
+                                <!-- transmission of data-->
                                 <input class="col-lg-3 col-md-3 col-sm-3 col-xs-3" name="thirdResult" type="text" placeholder="total">
                                 <input name="thirdCorrectResult" type="hidden"
                                 value="<?php echo $thirdCorrectResult= multiply($randFirstNumber, $randSecondNumber); 
@@ -86,14 +89,14 @@ include ("fonctions_maths.php"); ?>
                                 <!-- second random number-->
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b><?php $randSecondNumber = searchRandNumber($number,$from, $upTo); ?></b></span>
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b>=</b></span>
-                                <!-- transmission des données-->
+                                <!-- transmission of data-->
                                 <input class="col-lg-3 col-md-3 col-sm-3 col-xs-3" name="fourthResult" type="text" placeholder="total">
                                 <input name="fourthCorrectResult" type="hidden"
                                 value="<?php echo $fourthCorrectResult= multiply($randFirstNumber, $randSecondNumber); 
                                 ?>">
                             </div>
                         </div>
-                        <!--bouton validation-->
+                        <!--validation button-->
                         <div class="col-lg-12 mt-4">
                             <div class="row justify-content-center">
                                 <input class="bg-primary p-2" type="submit" value=" Mon score " >

@@ -2,7 +2,7 @@
 include ("fonctions_maths.php"); ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,17 +14,23 @@ include ("fonctions_maths.php"); ?>
 </head>
 
 <body>
-    <?php $number= 0; 
-    $numberHundred = 100;?>
+    <!-- instantiation -->
+    <?php 
+    $number = 0; 
+    $numberHundred = 100;
+    $from = 11;
+    $upTo = 9999;
+    ?>
+
     <div class="container">
             <h1 class="text-center">Multiplication par 100</h1>
             <header class="quizz text-center mb-4 pt-2 pb-2 bg-info">
                 <h2 class="play text-light">C'EST PARTI</h2>
                 <p class="subheading font-weight-light mb-2 text-light">Et hop, on met deux 0 à la fin !</p>
-                <!-- Image -->
+                <!-- Avatar -->
                 <img src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortFlat&accessoriesType=Blank&hairColor=Blonde&facialHairType=Blank&clotheType=GraphicShirt&clotheColor=Red&graphicType=Pizza&eyeType=Default&eyebrowType=RaisedExcitedNatural&mouthType=Twinkle&skinColor=Light' alt=""/>
             </header>
-        <!-- operation form-->
+            <!-- operation form-->
             <main>
                 <form action="cible_calcul_mental.php" method="get">
                     <div class="col-12">
@@ -32,29 +38,29 @@ include ("fonctions_maths.php"); ?>
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
                                 <!-- first random number-->
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
-                                <b><?php $randFirstNumber = randCountNumberWithSeveralFigures($number);?></b></span>
+                                <b><?php $randFirstNumber = searchRandNumber($number,$from, $upTo) ?></b></span>
                                 <i class="fa fa-times-circle" style="color:#FF502F"></i> 
-                                <!-- add 10-->
+                                <!-- multiply by 10-->
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b><?php echo $numberHundred;?></b></span>
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b>=</b></span>
-                                
                                 <input class="col-lg-3 col-md-3 col-sm-3 col-xs-3" name="firstResult" type="text" placeholder="total">
+                                <!-- transmission of data-->
                                 <input name="firstCorrectResult" type="hidden"
-                                value="<?php echo $firstCorrectResult= add($randFirstNumber, $numberHundred); 
+                                value="<?php echo $firstCorrectResult= multiply($randFirstNumber, $numberHundred); 
                                 ?>">
                             </div>                    
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
                                 <!-- first random number-->
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
-                                <b><?php $randFirstNumber = randCountNumberWithSeveralFigures($number);?></b></span>
+                                <b><?php $randFirstNumber = searchRandNumber($number,$from, $upTo) ?></b></span>
                                 <i class="fa fa-times-circle" style="color:#FF502F"></i> 
-                                <!-- add 10-->
+                                <!-- multiply by 10-->
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b><?php echo $numberHundred;?></b></span>
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b>=</b></span>
-                                
                                 <input class="col-lg-3 col-md-3 col-sm-3 col-xs-3" name="secondResult" type="text" placeholder="total">
+                                <!-- transmission of data-->
                                 <input name="secondCorrectResult" type="hidden"
-                                value="<?php echo $secondCorrectResult= add($randFirstNumber, $numberHundred); 
+                                value="<?php echo $secondCorrectResult= multiply($randFirstNumber, $numberHundred); 
                                 ?>">
                             </div>
                         </div>
@@ -64,30 +70,29 @@ include ("fonctions_maths.php"); ?>
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
                                 <!-- first random number-->
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
-                                <b><?php $randFirstNumber = randCountNumberWithSeveralFigures($number);?></b></span>
+                                <b><?php $randFirstNumber = searchRandNumber($number,$from, $upTo) ?></b></span>
                                 <i class="fa fa-times-circle" style="color:#FF502F"></i> 
-                                <!-- add 10-->
+                                <!-- multiply by 10-->
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b><?php echo $numberHundred;?></b></span>
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b>=</b></span>
-                                
                                 <input class="col-lg-3 col-md-3 col-sm-3 col-xs-3" name="thirdResult" type="text" placeholder="total">
+                                <!-- transmission of data-->
                                 <input name="thirdCorrectResult" type="hidden"
-                                value="<?php echo $thirdCorrectResult= add($randFirstNumber, $numberHundred); 
+                                value="<?php echo $thirdCorrectResult= multiply($randFirstNumber, $numberHundred); 
                                 ?>">
-                            </div>
-                        
+                            </div>                        
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
                                 <!-- first random number-->
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
-                                <b><?php $randFirstNumber = randCountNumberWithSeveralFigures($number);?></b></span>
+                                <b><?php $randFirstNumber = searchRandNumber($number,$from, $upTo) ?></b></span>
                                 <i class="fa fa-times-circle" style="color:#FF502F"></i> 
-                                <!-- add 10-->
+                                <!-- multiply by 10-->
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b><?php echo $numberHundred;?></b></span>
                                 <span class="col-lg-1 col-md-1 col-sm-2 col-xs-2"><b>=</b></span>
-                                
                                 <input class="col-lg-3 col-md-3 col-sm-3 col-xs-3" name="fourthResult" type="text" placeholder="total">
+                                <!-- transmission of data-->
                                 <input name="fourthCorrectResult" type="hidden"
-                                value="<?php echo $fourthCorrectResult= add($randFirstNumber, $numberHundred); 
+                                value="<?php echo $fourthCorrectResult= multiply($randFirstNumber, $numberHundred); 
                                 ?>">
                             </div>
                         </div>
