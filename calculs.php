@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -7,13 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/classecm.css">
     <script src="https://kit.fontawesome.com/94ce8cff49.js" crossorigin="anonymous"></script>
-    <title>Calcul mental</title>
+    <title>Calculs</title>
 </head>
 
 <body>
 
     <header class="row justify-content-center">
-        <h1>Calcul mental</h1>
+        <h1>Calculs</h1>
     </header>
 
     <main class="container" style="background-color:white;">
@@ -28,10 +28,11 @@
                         aria-controls="collapse"><i class="fas fa-plus fa-9x"></i></a>
                         <div class="collapse" id="collapse_add">
                             <div class="card-body justify-content-between align-items-center">
-                                <a class="btn btn-primary mb-2" href="addition_mentale_chiffres.php">Unités</a>
-                                <a class="btn btn-primary mb-2" href="addition_mentale_10.php">+10</a>
-                                <a class="btn btn-primary mb-2" href="addition_mentale_100.php">+100</a>
-                                <a class="btn btn-primary mb-2" href="addition_mentale_1000.php">+1000</a>
+                                <a href="addition_mentale_chiffres.php" class="list-group-item list-group-item-action  bg-info text-light border border-light">+ 1 à 9</a>
+                                <a href="addition_mentale_10.php" class="list-group-item list-group-item-action  bg-info text-light border border-light">+10</a>
+                                <a href="addition_mentale_100.php" class="list-group-item list-group-item-action  bg-info text-light border border-light">+100</a>
+                                <a href="addition_mentale_1000.php" class="list-group-item list-group-item-action  bg-info text-light border border-light">+1000</a>
+                                <a href="addition_posee.php" class="list-group-item list-group-item-action  bg-info text-light border border-light">Addition posée</a>
                             </div>
                         </div>
                     </div>
@@ -43,10 +44,10 @@
                         aria-controls="collapse"><i class="fas fa-minus fa-9x"></i></a>
                         <div class="collapse" id="collapse_substract">
                             <div class="card-body justify-content-between align-items-center">
-                                <a class="btn btn-primary mb-2" href="soustraction_mentale_unites.php">Unités</a>
-                                <a class="btn btn-primary mb-2" href="soustraction_mentale_10.php">-10</a>
-                                <a class="btn btn-primary mb-2" href="soustraction_mentale_100.php">-100</a>
-                                <a class="btn btn-primary mb-2" href="soustraction_mentale_1000.php">-1000</a>
+                                <a href="soustraction_mentale_chiffres.php"class="list-group-item list-group-item-action  bg-info text-light border border-light">Unités</a>
+                                <a href="soustraction_mentale_10.php" class="list-group-item list-group-item-action  bg-info text-light border border-light" class="list-group-item list-group-item-action  bg-info text-light border border-light">-10</a>
+                                <a href="soustraction_mentale_100.php" class="list-group-item list-group-item-action  bg-info text-light border border-light">-100</a>
+                                <a href="soustraction_mentale_1000.php" class="list-group-item list-group-item-action  bg-info text-light border border-light">-1000</a>
                             </div>  
                         </div>
                     </div>
@@ -61,7 +62,7 @@
                     aria-controls="collapse"><i class="fas fa-times fa-9x"></i></a>
                         <div class="collapse" id="collapse_multiply">
                             <div class="card-body justify-content-between align-items-center">
-                                <a class="btn btn-primary mb-2" href="multiplication_mentale_unites.php">Tables</a>
+                                <a class="btn btn-primary mb-2" href="multiplication_mentale_chiffres.php">Tables</a>
                                 <a class="btn btn-primary mb-2" href="multiplication_mentale_10.php">x10</a>
                                 <a class="btn btn-primary mb-2" href="multiplication_mentale_100.php">x100</a>
                                 <a class="btn btn-primary mb-2" href="multiplication_mentale_1000.php">x1000</a>
